@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: Scaffold(
-      body: Center(
-        child: Text('Hello World!'),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Colors.deepPurple, Colors.deepPurpleAccent],
+          ),
+        ),
+        child: const Center(
+          child: Text(
+            'Hello World!',
+            style: TextStyle(
+              fontSize: 28,
+              color: Colors.white,
+            ),
+          ),
+        ),
       ),
     ),
   ));
