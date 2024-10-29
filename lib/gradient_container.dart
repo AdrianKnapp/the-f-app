@@ -1,3 +1,4 @@
+import 'package:first_app/home_title.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -14,13 +15,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: const Center(
-        child: Text(
-          'app',
-          style: TextStyle(
-            fontSize: 28,
-            color: Colors.white,
-          ),
-        ),
+        child: HomeTitle(),
       ),
     );
   }
