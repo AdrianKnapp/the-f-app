@@ -1,3 +1,4 @@
+import 'package:first_app/home_title.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -14,6 +15,10 @@ class GradientContainer extends StatelessWidget {
   final Alignment startAlignment;
   final Alignment endAlignment;
 
+  void rollDice() {
+    print('Rolling dice...');
+  }
+
   @override
   Widget build(context) {
     return Container(
@@ -25,9 +30,17 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dices/dice-1.png',
-          width: 200,
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/dices/dice-1.png',
+              width: 200,
+            ),
+            TextButton(
+              onPressed: rollDice,
+              child: const HomeTitle('Roll Dice'),
+            )
+          ],
         ),
       ),
     );

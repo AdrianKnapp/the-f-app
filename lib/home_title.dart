@@ -10,9 +10,9 @@ class HomeTitle extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const Text(
-      'app',
-      style: TextStyle(
+    return Text(
+      text,
+      style: const TextStyle(
         fontSize: 28,
         color: Colors.white,
       ),
