@@ -1,24 +1,34 @@
-import 'package:first_app/home_title.dart';
 import 'package:flutter/material.dart';
 
-const startAlignment = Alignment.topLeft;
-const endAlignment = Alignment.bottomRight;
-
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer({
+    super.key,
+    required this.startAlignment,
+    required this.endAlignment,
+  });
+
+  const GradientContainer.purple({super.key})
+      : startAlignment = Alignment.topLeft,
+        endAlignment = Alignment.bottomRight;
+
+  final Alignment startAlignment;
+  final Alignment endAlignment;
 
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: startAlignment,
           end: endAlignment,
-          colors: [Colors.deepPurple, Colors.deepPurpleAccent],
+          colors: const [Colors.deepPurple, Colors.deepPurpleAccent],
         ),
       ),
-      child: const Center(
-        child: HomeTitle('My text'),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dices/dice-1.png',
+          width: 200,
+        ),
       ),
     );
   }
