@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class HomeTitle extends StatelessWidget {
-  const HomeTitle({
+  const HomeTitle(
+    this.text, {
     super.key,
   });
+
+  final String text;
 
   @override
   Widget build(context) {
